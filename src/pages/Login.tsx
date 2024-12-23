@@ -188,7 +188,7 @@ function Login() {
                                     <div className='flex flex-row items-center justify-between ml-1 mr-1'>
                                         <div className='login-btn-devider'/> OR <div className='login-btn-devider'/>
                                     </div>
-                                    <AnimatedButton>
+                                    <AnimatedButton onClick={() => ()=> window.open('https://magiceden.io/marketplace/soldecoder', "_blank")}>
                                         <img src={meLogo} className="me-logo mr-2"/>
                                         Buy 1 NFT to gain access
                                     </AnimatedButton>

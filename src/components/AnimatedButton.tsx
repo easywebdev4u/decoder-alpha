@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { IonButton } from '@ionic/react';
 import { createAnimation, Animation } from '@ionic/react';
 
-const AnimatedButton: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const AnimatedButton: React.FC<{ children: React.ReactNode, onClick: () => void }> = ({ children, onClick }) => {
   const buttonRef = useRef<HTMLIonButtonElement>(null);
   const animationRef = useRef<Animation | null>(null);
 
@@ -46,6 +46,7 @@ const AnimatedButton: React.FC<{ children: React.ReactNode }> = ({ children }) =
       <IonButton
         color='#000'
         ref={buttonRef}
+        onClick={onClick}
         onMouseEnter={playAnimation}
         onMouseLeave={stopAnimation}
         style={{
